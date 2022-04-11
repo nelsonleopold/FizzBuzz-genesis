@@ -1,6 +1,6 @@
 // Step One, get the information (controller, accept requests)
 function getValues() {
-    // First get the fizz and buzz values from user
+    // First get the fizz, buzz, start, and end values from user
     let fizzValue = document.getElementById("fizzValue").value;
     let buzzValue = document.getElementById("buzzValue").value;
     let startValue = document.getElementById("startValue").value;
@@ -12,16 +12,16 @@ function getValues() {
     startValue = parseInt(startValue);
     endValue = parseInt(endValue);
 
-    // creates default values if nothing is input
+    // verify that numbers are all integers
     if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue) &&
         Number.isInteger(startValue) && Number.isInteger(endValue)) {
-        // Call display values and pass fizz and buzz values to function
+
         // calculate fizzbuzz
         let fbValues = fizzBuzzA(startValue, endValue, fizzValue, buzzValue);
 
         // display the value
         displayValues(fbValues);
-    } else {
+    } else { // display an alert if anything other than integers is entered
         alert("Try entering a number instead. I don't like to calculate fizzbuzz with letters and words.");
     }
 }
@@ -31,6 +31,7 @@ function fizzBuzzA(start, end, fizz, buzz) {
     // create an array
     let fbValues = [];
 
+    // iterate over the array and push values
     for (let i = start; i <= end; i++) {
         if (i % fizz == 0 && i % buzz == 0) {
             fbValues.push('FizzBuzz');
@@ -54,6 +55,8 @@ function displayValues(fizzBuzzValues) {
     // get element where we want results to print
     element = document.getElementById("results");
 
+    // iterate over array and create div elements, add css styling with classes
+    // and append to the element we want to display
     for (let index = 0; index < fizzBuzzValues.length; index++) {
 
         let item = document.createElement("div");
@@ -73,6 +76,7 @@ function displayValues(fizzBuzzValues) {
     }
 }
 
+// clear the results
 function clearResults() {
     document.getElementById("results").innerHTML = '';
 }
