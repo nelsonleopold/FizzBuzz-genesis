@@ -65,24 +65,76 @@
 
     <main class="flex-shrink-0">
         <div class="container mt-5">
-            <h1>TO DO LIST:</h1>
-            <div class="row align-items-end">
-                <div class="col">
-                    <label for="txtMessage" class="form-label">Enter Fizz Value</label>
-                    <input type="text" name="txtMessage" class="form-control" id="fizzValue"
-                        onfocus="this.placeholder=''" placeholder="Enter Fizz Value">
-                </div>
-                <div class="col">
-                    <label for="txtMessage" class="form-label">Enter Buzz Value</label>
-                    <input type="text" name="txtMessage" class="form-control" id="buzzValue"
-                        onfocus="this.placeholder=''" placeholder="Enter Buzz Value">
-                </div>
-                <div class="col">
-                    <button id="btnDisplayMessage" class="btn btn-primary">Let's Go</button>
+            <img src="/img/fizzbuzzTransparent1080x356.png" width="400" alt="">
+
+            <div class="row mt-5">
+                <row class="col">
+                    <div class="row mb-5">
+                        <div class="col">
+                            <label for="txtMessage" class="form-label">
+                                <h1>A Coding Challenge:</h1>
+                            </label>
+                            <hr>
+                            <p>A classic coding challenge with a twist.
+                                Prints out the integers from 1 to 100
+                                If an integer is evenly divisible by 3, then code will print <span
+                                    class="fizz">'Fizz'</span>.
+                                If an integer is evenly divisible by 5, then code will print <span
+                                    class="buzz">'Buzz'</span>.
+                                And if an integer is evenly divisible by both 3 and 5, then code will print <span
+                                    class="fizzbuzz">'FizzBuzz'</span>.
+                            </p>
+                        </div>
+                        <div class="col">
+                            <label for="txtMessage" class="form-label">
+                                <h1>Instructions:</h1>
+                            </label>
+                            <hr>
+                            <p>Enter a starting and ending value. Then enter a value for <span
+                                    class="fizz">'Fizz'</span>
+                                and a value for <span class="buzz">'Buzz'</span>. Then click the 'Let's Go' button. If
+                                nothing is entered, program will default to classic <span class="fizzbuzz">'FizzBuzz'</span>
+                                meaning <span class="fizz">'Fizz'</span> will be 3, <span class="buzz">'Buzz'</span> will
+                                be 5 and it will print from 1 to 100.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col">
+                            <label for="txtMessage" class="form-label">Enter Starting Value</label>
+                            <input type="text" name="txtMessage" class="form-control" id="startValue"
+                                onfocus="this.placeholder=''" value="1">
+                        </div>
+                        <div class="col">
+                            <label for="txtMessage" class="form-label">Enter Ending Value</label>
+                            <input type="text" name="txtMessage" class="form-control" id="endValue"
+                                onfocus="this.placeholder=''" value="100">
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col">
+                            <label for="txtMessage" class="form-label">Enter Fizz Value</label>
+                            <input type="text" name="txtMessage" class="form-control" id="fizzValue"
+                                onfocus="this.placeholder=''" value="3">
+                        </div>
+                        <div class="col">
+                            <label for="txtMessage" class="form-label">Enter Buzz Value</label>
+                            <input type="text" name="txtMessage" class="form-control" id="buzzValue"
+                                onfocus="this.placeholder=''" value="5">
+                        </div>
+                    </div>
+                </row>
+                <div class="row">
+                    <div class="col">
+                        <button id="btnDisplayMessage" class="btn btn-primary btn-lg mt-2">Let's Go</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="message mt-5">
+            <div class="div-style mt-5">
+                <label for="txtMessage" class="form-label">
+                    <h1>Results:</h1>
+                </label>
                 <div id="results" class="row row-cols-5">
                     <!-- My items will go here -->
                 </div>

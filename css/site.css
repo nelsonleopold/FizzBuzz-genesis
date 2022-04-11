@@ -16,6 +16,10 @@ main>.container {
     margin-bottom: 5rem;
 }
 
+.form-label {
+    color: var(--nl-secondary-color);
+}
+
 .sticky-footer {
     position: sticky;
     left: 0;
@@ -67,4 +71,16 @@ main>.container {
 .message {
     font-size: 2rem;
     font-weight: bold;
+}
+
+.fizz {
+    color: red;
+}
+
+.buzz {
+    color: blue;
+}
+
+.fizzbuzz {
+    color: purple;
 }
