@@ -36,7 +36,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/index.html">
-                <img src="/img/nelsonTheDevTransparent250pxX88px.png" height="32" alt=""> APP NAME</a>
+                <img src="/img/nelsonTheDevTransparent250pxX88px.png" height="32" alt="">&nbsp; FizzBuzz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -68,19 +68,24 @@
             <h1>TO DO LIST:</h1>
             <div class="row align-items-end">
                 <div class="col">
-                    <label for="txtMessage" class="form-label">Item</label>
-                    <input type="text" name="txtMessage" class="form-control" id="txtMessage"
-                        onfocus="this.placeholder=''" placeholder="Write Task Here">
+                    <label for="txtMessage" class="form-label">Enter Fizz Value</label>
+                    <input type="text" name="txtMessage" class="form-control" id="fizzValue"
+                        onfocus="this.placeholder=''" placeholder="Enter Fizz Value">
                 </div>
                 <div class="col">
-                    <button id="btnDisplayMessage" class="btn btn-primary">Add</button>
+                    <label for="txtMessage" class="form-label">Enter Buzz Value</label>
+                    <input type="text" name="txtMessage" class="form-control" id="buzzValue"
+                        onfocus="this.placeholder=''" placeholder="Enter Buzz Value">
+                </div>
+                <div class="col">
+                    <button id="btnDisplayMessage" class="btn btn-primary">Let's Go</button>
                 </div>
             </div>
 
             <div class="message mt-5">
-                <ol id="results" class="list-group list-group-numbered">
+                <div id="results" class="row row-cols-5">
                     <!-- My items will go here -->
-                </ol>
+                </div>
             </div>
         </div>
     </main>
@@ -118,7 +123,7 @@
     <script src="/js/site.js"></script>
 
     <script>
-        document.getElementById("btnDisplayMessage").addEventListener("click", getMessage);
+        document.getElementById("btnDisplayMessage").addEventListener("click", getValues);
     </script>
 
 </body>
