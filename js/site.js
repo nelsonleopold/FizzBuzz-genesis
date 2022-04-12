@@ -27,6 +27,7 @@ function getValues() {
 }
 
 // business logic layer - Model
+// if statements
 function fizzBuzzA(start, end, fizz, buzz) {
     // create an array
     let fbValues = [];
@@ -44,6 +45,48 @@ function fizzBuzzA(start, end, fizz, buzz) {
         }
     }
     return fbValues;
+}
+
+// use switch case
+function fizzBuzzB(start, end, fizz, buzz) {
+    let fbValues = [];
+
+    let isFizz = false;
+    let isBuzz = false;
+
+    for (i = start; i <= end; i++) {
+        isFizz = (i % fizz == 0);
+        isBuzz = (i % buzz == 0);
+
+        switch(true) {
+            case isFizz && isBuzz:{
+                fbValues.push('FizzBuzz');
+                break;
+            }
+            case isFizz:{
+                fbValues.push('Fizz');
+                break;
+            }
+            case isBuzz:{
+                fbValues.push('Buzz');
+                break;
+            }
+            default: {
+                fbValues.push(i);
+                break;
+            }
+        }
+    }
+}
+
+// use a ternary function
+function fizzBuzzC (start, end, fizz, buzz){
+    let fbValues = [];
+
+    for (let i= start; i <= end; i++) {
+         let value = ((i%fizz ==0 ? 'Fizz' : '') + (i%buzz ==0 ? 'Buzz' : '') || i);
+         fbValues.push(value);
+    }
 }
 
 // Final Step, display the information (view, displays stuff on screen)
